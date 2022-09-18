@@ -80,6 +80,7 @@ $rules = [
 ];
 
 $finder = Finder::create()
+    ->in(__DIR__)
     ->path('config')
     ->path('controllers')
     ->path('libraries/plugins')
