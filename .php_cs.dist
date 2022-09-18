@@ -80,8 +80,9 @@ $rules = [
 ];
 
 $finder = Finder::create()
-    ->in(__DIR__)
-    ->notPath('#libraries/adminer\.php/')
+    ->path('config')
+    ->path('controllers')
+    ->path('libraries/plugins')
     ->exclude($directories);
 
 return Config::create()
