@@ -1,0 +1,5 @@
+{
+    "name": "adminer",
+    "description": "Paket manajemen database berbasis Adminer untuk rakit framework.",
+    "version": "v1.0.0"
+}
