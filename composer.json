@@ -1,21 +1,21 @@
 {
-    "name": "esyede/notyf",
-    "description": "Paket flash message sederhana berbasis notyf-js untuk rakit framework.",
-    "keywords": ["notyf", "flash", "notification", "rakit", "framework"],
-    "homepage": "https://github.com/esyede/notyf",
+    "name": "esyede/adminer",
+    "description": "Paket manajemen database berbasis Adminer untuk rakit framework.",
+    "keywords": ["php", "database", "adminer", "rakit"],
+    "homepage": "https://github.com/esyede/adminer",
     "type": "library",
     "license": "MIT",
     "authors": [
         {
             "name": "Suyadi",
             "email": "suyadi.1992@gmail.com",
-            "homepage": "https://github.com/esyede/notyf",
+            "homepage": "https://github.com/esyede/adminer",
             "role": "Creator"
         }
     ],
     "support": {
-        "issues": "https://github.com/esyede/notyf/issues?state=open",
-        "source": "https://github.com/esyede/notyf"
+        "issues": "https://github.com/esyede/adminer/issues?state=open",
+        "source": "https://github.com/esyede/adminer"
     },
     "require": {
         "php": ">=5.4.0"
