@@ -1,4 +1,7 @@
 <?php
+
+defined('DS') or exit('No direct script access.');
+
 /** Adminer - Compact database management
 * @link https://www.adminer.org/
 * @author Jakub Vrana, https://www.vrana.cz/
