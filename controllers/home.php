@@ -30,6 +30,6 @@ class Adminer_Home_Controller extends Controller
             $_POST['auth']['password'] = isset_or($db['password'], '');
         }
 
-        require dirname(__DIR__).DS.'libraries'.DS.'index.php';
+        return require dirname(__DIR__).DS.'libraries'.DS.'index.php';
     }
 }
