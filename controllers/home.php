@@ -22,12 +22,13 @@ class Adminer_Home_Controller extends Controller
 
         if (! isset($_GET['db']) && Config::get('adminer::main.autologin')) {
             $_POST['auth']['driver'] = $driver;
-            $_POST['auth']['server'] = isset_or($db['host'], '').(isset($db['port']) ? ':'.$db['port'] : '');
+            $_POST['auth']['server'] = (isset($db['host']) ? $db['host'] : '')
+                .(isset($db['port']) ? ':'.$db['port'] : '');
             $_POST['auth']['db'] = ($driver === 'sqlite')
                 ? path('storage').'database'.DS.RAKIT_KEY.'-'.$db['database']
                 : $db['database'];
-            $_POST['auth']['username'] = isset_or($db['username'], '');
-            $_POST['auth']['password'] = isset_or($db['password'], '');
+            $_POST['auth']['username'] = isset($db['username']) ? $db['username'] : '';
+            $_POST['auth']['password'] = isset($db['password']) ? $db['password'] : '';
         }
 
         return require dirname(__DIR__).DS.'libraries'.DS.'index.php';
