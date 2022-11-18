@@ -12,7 +12,6 @@ function adminer_object()
     }
 
     $plugins = [
-        new AdminerTablesCollapse(),
         new AdminerEditForeign(),
         new AdminerCollations(),
         new AdminerEnumTypes(),
