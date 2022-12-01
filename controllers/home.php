@@ -10,7 +10,7 @@ class Adminer_Home_Controller extends Controller
     public function action_index()
     {
         if (! Config::get('adminer::main.enabled')) {
-            return abort(404);
+            return Response::error(404);
         }
 
         // Proteksi route
