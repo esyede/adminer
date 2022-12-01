@@ -25,33 +25,22 @@ return [
     |
     */
 
-    'middleware' => [
+    'middlewares' => [
         'auth',
         // 'admin_only',
     ],
 
     /*
     |--------------------------------------------------------------------------
-    | Auto Login
+    | Hide Database
     |--------------------------------------------------------------------------
     |
-    | Aktifkan autologin ke database
-    | PENTING: Mohon hanya mengaktifkan autologin ketika middleware
-    | sudah diatur dengan benar!
+    | Jangan tampilkan database berikut pada adminer.
     |
     */
 
-    'autologin' => true,
-
-    /*
-    |--------------------------------------------------------------------------
-    | Password-less Login
-    |--------------------------------------------------------------------------
-    |
-    | Izinkan login ke adminer tanpa menggunakan username dan password.
-    | PENTING: Hanya aktifkan ini ketika anda berada di lingkungan lokal saja!
-    |
-    */
-
-    'passwordless_login' => true,
+    'hide_databases' => [
+        // 'information_schema',
+        // 'performance_schema',
+    ],
 ];

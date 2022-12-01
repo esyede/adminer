@@ -5,7 +5,7 @@
 Paket manajemen database berbasis [Adminer](https://adminer.org) untuk rakit framework.
 
 ## Instalasi
-Jalankan perintah ini via rakit console:
+Jalankan perintah berikut via rakit console:
 
 ```sh
 php rakit package:install adminer
@@ -27,7 +27,7 @@ Caranya, buka file `packages/adminer/config/main.php` dan
 tambahkan middleeware anda disana:
 
 ```php
-'middleware' => [
+'middlewares' => [
     'auth',
     'admin_only', // ubah ini sesuai nama middleware anda
 ],
@@ -58,6 +58,24 @@ https://situsku.com/adminer
 
 Jika semuanya baik - baik saja, anda akan langsung bisa mengakses database
 mengikuti koneksi yang anda atur di konfigurasi database default aplikasi anda.
+
+
+## Mengubah driver database
+
+Secara default, adminer akan otomatis mencoba terkoneksi ke database default
+yang anda atur di file konfigurasi `application/config/database.php`, yang secara
+default di set ke `sqlite`.
+
+Namun tentu saja dapat kapanpun mengubah koneksinya sesuai kebutuhan.
+
+Misalnya, anda ingin mngubah koneksinya untuk menggunakan `mysql`, maka
+cukup ubah file konfigurasi di file `database.php` anda seperti berikut:
+
+```php
+'default' => 'mysql',
+```
+
+Dan jangan lupa isikan juga kredensial koneksi mysql anda agar koneksi dapat dijalankan.
 
 
 ## Lisensi

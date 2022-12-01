@@ -4,11 +4,13 @@ defined('DS') or exit('No direct script access.');
 
 class AdminerDatabaseHide
 {
-    protected $disabled;
+    protected $disabled = [];
 
-    public function __construct($disabled)
+    public function __construct(array $disabled = [])
     {
-        $this->disabled = array_map('strtolower', $disabled);
+        if (count($disabled) > 0) {
+            $this->disabled = array_map('strtolower', array_values($disabled));
+        }
     }
 
     public function databases($flush = true)
