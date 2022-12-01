@@ -4,6 +4,7 @@ defined('DS') or exit('No direct script access.');
 
 use System\Arr;
 use System\Config;
+use System\Response;
 
 class Adminer_Home_Controller extends Controller
 {
