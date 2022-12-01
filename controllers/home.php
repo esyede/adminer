@@ -2,6 +2,9 @@
 
 defined('DS') or exit('No direct script access.');
 
+use System\Arr;
+use System\Config;
+
 class Adminer_Home_Controller extends Controller
 {
     public function action_index()
